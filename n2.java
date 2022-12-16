@@ -41,7 +41,7 @@ public class n2 {
                     for (int j = i; j < array.length - 1; j++) {
                         newArr[j] = array[j + 1];
                     }
-                    break;
+    
                 }
             }
             System.out.println("Оригинальный массив:" + Arrays.toString(array));

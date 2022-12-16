@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 public class n1 {
     public static void main(String[] args){
         Scanner in = new Scanner(System.in);    
@@ -29,14 +30,17 @@ public class n1 {
             }
             while (array[i] < -9999*9999 || array[i] > 9999*9999);        
         }
-
-        for (int i = 0; i < array_size/2; i++) {
-            int tmp = array[i];            
-            array[i] = (array[i]*(i+1)+array[i+1])/(i+2);                    
+        float[] Array1 = new float[array_size];
+        float sum = 0;
+        for (int j = 0; j < array_size; j++) {
+            sum += array[j];
+            Array1[j] = sum/(j+1);
         }
-
-        for (int elem : array)
-            System.out.print(elem + " ");        
-            in.close();    
+        System.out.println();
+        System.out.println("Массив после обработки: ");
+        for (int l = 0; l < Array1.length; l++) {
+            System.out.println(Array1[l] + " ");
         }
+        in.close();
+    }
 }
